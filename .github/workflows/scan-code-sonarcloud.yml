@@ -5,8 +5,8 @@ on:
 jobs:
   sonarcloud-scan:
     uses: button-inc/gh-actions/.github/workflows/scan-code-sonarcloud.yml@develop
-  with:
-    projectBaseDir: main
+    with:
+      projectBaseDir: main
     secrets:
       github-token: ${{ secrets.GITHUB_TOKEN }}
       sonar-token: ${{ secrets.SONAR_TOKEN}}
