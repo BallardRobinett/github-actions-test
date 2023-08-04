@@ -24,6 +24,12 @@ function optionChanged(selectedSubject) {
  */
 function fillInfo(subjectID) {
     d3.json("data/samples.json").then((data) => {
+
+        // Intentional bug
+        let arr = ["a", "b", "c"];
+        let merged = arr.reduce(function(a, b) {
+        a.concat(b);
+        }); // Noncompliant: No return statement, will result in TypeError
         
         const metadataField = d3.select("#sample-metadata");
 
