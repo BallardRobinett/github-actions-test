@@ -4,7 +4,7 @@ on:
   push:
 jobs:
   sonarcloud-scan:
-    uses: button-inc/gh-actions/.github/workflows/scan-code-sonarcloud.yml@develop
+    uses: button-inc/gh-actions/.github/workflows/scan-code-sonarcloud.yml@791-add-base-directory-arg
     with:
       projectBaseDir: main
     secrets:
